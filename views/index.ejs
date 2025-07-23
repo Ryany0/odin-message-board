@@ -1,0 +1,8 @@
+<body>
+    <a href="/new"> New Message </a>
+    <ul>
+        <% messages.forEach(message => { %>
+            <li> <%- include('user', {user: message.user}); %>  <a href=<%= `/details/${message.user}` %>>Open</a></li>
+        <% }); %>
+    </ul>
+</body>
